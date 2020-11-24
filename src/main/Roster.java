@@ -75,10 +75,12 @@ public class Roster extends Observable {
 
 	public void save() {
 		// pass
+
 	}
 
 	public void plotData() {
 		// pass
+
 	}
 
 	/**
