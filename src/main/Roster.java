@@ -65,9 +65,9 @@ public class Roster extends Observable {
 		ArrayList<ArrayList<String>> attendance = readCSV();
 
 		// STEP 0: Ask for a date using Date Picker.
-        // STEP 1: Combine student attendance times to one
-        // STEP 2: Sort attendance rows corresponding to order of appearance in roster
-        // STEP 3: Merge attendance with roster
+        // STEP 1: Combine duplicate rows
+        // STEP 2: Merge attendance with roster
+        // STEP 3: Display JDialog message
 
 		setChanged();
 		notifyObservers();
