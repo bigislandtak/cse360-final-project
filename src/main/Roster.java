@@ -74,7 +74,24 @@ public class Roster extends Observable {
 	}
 
 	public void save() {
-		// pass
+		JFileChooser fc = new JFileChooser();
+		fc.setSelectedFile(new File(".csv"));
+		File file = null;
+		int returnVal = fc.showSaveDialog(null);
+		if (returnVal == JFileChooser.APPROVE_OPTION) {
+	        file = fc.getSelectedFile();
+	        try {
+	        	PrintWriter pw = new PrintWriter(file);
+	        	pw.println(String.join(",", columnNames));	// print header to csv
+	        	for (int i = 0; i < table.size(); i++) {
+	        		pw.println(String.join(",", table.get(i)));
+	        	}
+	        	pw.flush();
+	        	pw.close();
+	        } catch (IOException ioe) {
+	        	ioe.printStackTrace();
+	        }
+	    } 
 	}
 
 	public void plotData() {
