@@ -60,8 +60,13 @@ public class Main extends JFrame implements ActionListener {
 		else if (command.equals("Plot Data")) {
 			roster.plotData();
 		}
-		else if (command.equals("About")) {
-			// pass
+		else if (command.equals("Team Information")) {
+			JDialog about = new JDialog(this, "Team Information");
+			JLabel team = new JLabel("Takeyuki Oshima, Kevin Diaz, Bryson, Jacob");
+			about.add(team);
+			about.setVisible(true);
+			about.setSize(300,300);
+			about.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 		}
 	}
 
