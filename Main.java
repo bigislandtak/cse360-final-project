@@ -3,6 +3,8 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class Main extends JFrame implements ActionListener {
+	private Roster roster;
+
 	public Main() {
 		setTitle("CSE360 Final Project");
 
@@ -34,6 +36,12 @@ public class Main extends JFrame implements ActionListener {
 		JMenuItem team = new JMenuItem("Team Information");
 		team.addActionListener(this);
 		about.add(team);
+
+		// Add data panel to JFrame and add make it observe roster
+		roster = new Roster();
+		DataPanel data = new DataPanel();
+		add(data);
+		roster.addObserver(data);
 	}
 
 	@Override
@@ -41,21 +49,20 @@ public class Main extends JFrame implements ActionListener {
 		String command = e.getActionCommand();
 
 		if (command.equals("Load a Roster")) {
-			// pass
+			roster.loadRoster();
 		}
 		else if (command.equals("Add Attendance")) {
-			// pass
+			roster.addAttendance();
 		}
 		else if (command.equals("Save")) {
-			// pass
+			roster.save();
 		}
 		else if (command.equals("Plot Data")) {
-			// pass
+			roster.plotData();
 		}
 		else if (command.equals("About")) {
-
+			// pass
 		}
-		System.out.println(command);
 	}
 
 	public static void main(String[] args) {
