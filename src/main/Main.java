@@ -65,7 +65,7 @@ public class Main extends JFrame implements ActionListener {
 			JLabel team = new JLabel("Takeyuki Oshima, Kevin Diaz, Bryson, Jacob");
 			about.add(team);
 			about.setVisible(true);
-			about.setSize(300,300);
+			about.setSize(350,350);
 			about.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 		}
 	}
