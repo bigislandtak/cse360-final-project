@@ -6,7 +6,7 @@ import javax.swing.*;
 public class Roster extends Observable {
 	private ArrayList<ArrayList<String>> table;
 	private ArrayList<String> columnNames;
-
+    public File filePass;
 	/**
 	* This method asks the user to choose a csv roster file to read from
 	* It reads the csv and stores it in a 2D array list
@@ -88,6 +88,7 @@ public class Roster extends Observable {
 	        	}
 	        	pw.flush();
 	        	pw.close();
+	        	filePass = file;
 	        } catch (IOException ioe) {
 	        	ioe.printStackTrace();
 	        }
@@ -95,7 +96,7 @@ public class Roster extends Observable {
 	}
 
 	public void plotData() {
-		ScatterPlot scatterPlot = new ScatterPlot();
+		ScatterPlot scatterPlot = new ScatterPlot(filePass);
 		scatterPlot.setSize(800,400);
 		scatterPlot.setLocationRelativeTo(null);
 		scatterPlot.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
