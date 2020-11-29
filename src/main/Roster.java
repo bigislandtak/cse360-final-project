@@ -74,7 +74,6 @@ public class Roster extends Observable {
 	}
 
 	public void save() {
-		// pass
 		JFileChooser fc = new JFileChooser();
 		fc.setSelectedFile(new File(".csv"));
 		File file = null;
