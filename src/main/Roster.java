@@ -79,8 +79,11 @@ public class Roster extends Observable {
 	}
 
 	public void plotData() {
-		// pass
-
+		ScatterPlot scatterPlot = new ScatterPlot();
+		scatterPlot.setSize(800,400);
+		scatterPlot.setLocationRelativeTo(null);
+		scatterPlot.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+		scatterPlot.setVisible(true);
 	}
 
 	/**
