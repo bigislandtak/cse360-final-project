@@ -62,7 +62,7 @@ public class Main extends JFrame implements ActionListener {
 		}
 		else if (command.equals("Team Information")) {
 			JDialog about = new JDialog(this, "Team Information");
-			JLabel team = new JLabel("Takeyuki Oshima, Kevin Diaz, Bryson Gregory, Jacob L");
+			JLabel team = new JLabel("Takeyuki Oshima, Kevin Diaz, Bryson Gregory, Jacob Licko");
 			about.add(team);
 			about.setVisible(true);
 			about.setSize(350,350);
