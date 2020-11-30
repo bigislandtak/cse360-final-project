@@ -186,6 +186,8 @@ public class Roster extends Observable {
 	}
 
 	public void plotData() {
+		
+		//Create the class object and set the UI Dimensions
 		ScatterPlot scatterPlot = new ScatterPlot(filePass);
 		scatterPlot.setSize(800,400);
 		scatterPlot.setLocationRelativeTo(null);
