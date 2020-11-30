@@ -35,7 +35,7 @@ public class ScatterPlot extends JFrame{
 		
 		//Create the series to be added to the dataset
 		XYSeries series1 = new XYSeries("Jan 1");
-		XYSeries series2 = new XYSeries("Feb 31");
+		XYSeries series2 = new XYSeries("Feb 31	");
 		XYSeries series3 = new XYSeries("Day 3");
 		XYSeries series4 = new XYSeries("Day 4");
 		XYSeries series5 = new XYSeries("Day 5");
@@ -76,8 +76,6 @@ public class ScatterPlot extends JFrame{
 				//System.out.println("Columns.length: " + columns[0].length());
 				//System.out.println("RowLength.length: " + columns.length);
 			
-				System.out.println(columns[6]);
-				System.out.println(columns[7]);
 				
 				for (int i = 6; i<rowLength; i++) {
 						if(columns[i] != null) {
@@ -125,7 +123,9 @@ public class ScatterPlot extends JFrame{
 		
 					
 					//five = 0; ten = 0; fifteen = 0; twenty = 0; twentyFive = 0; thirty = 0; thirtyFive = 0; forty = 0; fortyFive = 0; fifty = 0; fiftyFive = 0; sixty = 0; sixtyFive = 0; seventy = 0; seventyFive = 0;
+				if (7 <rowLength) {
 					for (int i = 7; i<rowLength; i++) {
+						if(columns[i] != null) {
 						int convert = Integer.parseInt(columns[i]);
 						if (convert >= 71) {
 							seventyFive_++;
@@ -162,7 +162,8 @@ public class ScatterPlot extends JFrame{
 						}
 							
 						}
-				
+					}
+				}
 			}
 			//Convert the counts into percentages and add the category data points to the scatter plot
 			series1.add((100*(0)/75), five);
